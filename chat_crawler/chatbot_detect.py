@@ -45,6 +45,7 @@ KNOWN_CHATBOTS = [
     {"name": "Botsify", "match": "botsify.com", "initVar": "botsify", "textPatterns": ["botsify"], "version": "botsify.version"},
     {"name": "Ada", "match": "ada.cx", "initVar": "ada", "textPatterns": ["ada support"], "version": "ada.version"},
     {"name": "Replika", "match": "replika.ai", "initVar": "replika", "textPatterns": ["replika"], "version": "replika.version"},
+    {"name": "Askly", "match": "askly.me", "initVar": "askly", "textPatterns": ["askly", "chatbot", "customer support"], "elementId": "askly-widget", "version": "askly.version"},
     
     # Generic Detection Patterns
     {"name": "Generic Chatbot", "match": "chatbot", "initVar": "chatbot", "envVar": "CHATBOT_API_KEY", "textPatterns": ["chatbot", "chat widget"], "elementId": "chatbot", "version": "chatbot.version"},
@@ -248,6 +249,6 @@ if __name__ == "__main__":
 
     url = sys.argv[1]
     bots = asyncio.run(detect_chatbots(url))
-    print(f"\n✅ Chatbots found on {url}:\n")
+    print(f"\n🔍 Detected chatbots on {url}:\n")
     for bot in bots:
         print(bot)
