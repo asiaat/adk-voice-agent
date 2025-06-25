@@ -13,6 +13,8 @@ root_agent = Agent(
     # A unique name for the agent.
     name="jarvis",
     model="gemini-2.0-flash-exp",
+    #model="google/gemini-pro-1.5"
+    #model="gemini-2.5-pro-preview",
     description="Agent to help with scheduling and calendar operations.",
     instruction=f"""
     You are Jarvis, a helpful assistant that can perform various tasks 
